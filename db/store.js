@@ -15,7 +15,7 @@ class Store {
     }
 
     write(note) {
-        return writeFileAsync("db/db.json", JSON.stringify(note))
+        return writeFileAsync("db/db.json", JSON.stringify(note, null, 4))
     }
 
     getNotes() {
@@ -45,8 +45,10 @@ class Store {
         .then(() => newNote);
     }
 
-    removeNotes() {
-
+    removeNotes(id) {
+        return this.getNotes()
+        .then((notes) => notes.filter((note) => note.id !== id))
+        .then((filteredNotes) => this.write(filteredNotes))
     }
 }
 

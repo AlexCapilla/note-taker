@@ -21,6 +21,12 @@ app.post("/api/notes", (req, res) => {
     }).catch((error) => res.status(500).json(error))
 })
 
+app.delete("/api/notes/:id", (req, res) => {
+    store.removeNotes(req.params.id).then(() => {
+        return res.status(200).json({ delete: true, id: req.params.id })
+    }).catch((error) => res.status(500).json(error))
+})
+
 
 // Optimize
 
