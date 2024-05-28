@@ -1,7 +1,8 @@
 [
     {
         "title": "Test Title",
-        "text": "Test text"
+        "text": "Test text",
+        "id": 1
     },
     {
         "title": "Coding with Alex",
@@ -9,8 +10,8 @@
         "id": "fc79b4b0-65f2-4263-b608-0020329f9cbf"
     },
     {
-        "title": "Final Test",
-        "text": "Hello again World",
-        "id": "6414ca30-14fc-422d-8152-c3792302216c"
+        "title": "New Note",
+        "text": "testing",
+        "id": "04c3d9ac-9f1a-4bfd-94e5-ecbb609fdf46"
     }
 ]
