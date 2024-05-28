@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static("public"));
+
 const store = require("./db/store");
 // Routes
 app.get("/api/notes", (req, res) => {
